@@ -1,0 +1,42 @@
+.headelement{
+    border: 4px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+.contentWrapper{
+    display: flex;
+  flex-wrap: nowrap;
+}
+.staticContent{
+    width: 40%;
+  margin: 10px;
+}
+.formContent{
+    width: 35%;
+    margin: 10px;
+}
+.adBanner{
+    width: 25%;
+}
+.text-bold{
+    font-weight: bold ;
+}
+.shapeform{
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.actions{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.actions button{
+    padding: 3px 12px;
+}
+.vertical{
+    border: 3px solid #ccc;
+    padding: 10px 10px;
+    border-radius: 5px;
+}

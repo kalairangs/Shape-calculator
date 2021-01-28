@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <title>Shape Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="body-section">
+        <div class="headelement">
+            <div>Shape Calculator</div>
+        </div>
+        <div class="contentWrapper">
+            <div class="staticContent">
+                <h3>Welcome To Shape Calculator</h3>
+                <p class="text-bold">Shape Calculator is an interactive web application. To the right you will
+                    find the 3 step application. Follow the instructions in each step.
+                    Clicking cancel will take you back to step 1. Enjoy!</p>
+                <p>
+                    A small river named Duden flows by their place and supplies it with the
+                    necessary regelialia. It is a paradisematic country, in which roasted parts of
+                    sentences fly into your mouth.
+                </p>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an
+                    almost unorthographic life One day however a small line of blind text by the
+                    name of Lorem Ipsum decided to leave for the far World of Grammar. The
+                    Big Oxmox advised her not to do so, because there were thousands of bad
+                    Commas.</p>
+            </div>
+            <div class="formContent">
+                <div class="shapeform">
+                    <div id="step1">
+                        <h3>
+                            Step1 : Select Your Shape
+                        </h3>
+                        <div>
+                            Please select the shape that you would like
+                            to calculate the area of and press the
+                            button "Go to step 2"
+                        </div>
+                        <div class="shapeInput">
+                            <div class="rectangle">
+                                <input type="radio" value="rectangle" name="shape" id="rect" />
+                                <label>Rectangle</label>
+                            </div>
+                            <div class="circle">
+                                <input type="radio" value="circle" name="shape" id="circle" />
+                                <label>Circle</label>
+                            </div>
+                            <div class="square">
+                                <input type="radio" value="square" name="shape" id="square" />
+                                <label>Square</label>
+                            </div>
+                            <div class="ellipse">
+                                <input type="radio" value="ellipse" name="shape" id="ellipse" />
+                                <label>Ellipse</label>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <button onclick="moveStep2()">Go to step2</button>
+                            <a>or Cancel</a>
+                        </div>
+                    </div>
+
+                    <div id="step2" style="display: none;">
+                        <h3>
+                            Step2 : Insert your values
+                        </h3>
+                        <div>
+                            You have selected a <span id="shapeText"></span>, please input
+                            the required variables.
+                        </div>
+                        <div id="rect-input" style="display:none ">
+                            <div class="shapeInput">
+                                <label>Length</label>
+                                <input type=" number" value="" id="length" placeholder="text" />
+                            </div>
+                            <div class="shapeInput">
+                                <label>Width</label>
+                                <input type=" number" value="" id="width" placeholder="text" />
+                            </div>
+                        </div>
+
+                        <div id="circle-input" style="display: none;">
+                            <div class="shapeInput">
+                                <label>Diameter</label>
+                                <input type=" number" value="" name="Diameter" placeholder="text" id="diameter" />
+                            </div>
+                        </div>
+
+                        <div id="square-input" style="display: none;">
+                            <div class="shapeInput">
+                                <label>side</label>
+                                <input type=" number" value="" name="side" placeholder="text" id="side" />
+                            </div>
+                        </div>
+
+                        <div id="ellipse-input" style="display: none;">
+                            <div class="shapeInput">
+                                <label>a-Axis</label>
+                                <input type=" number" value="" name="a-axis" placeholder="text" id="aAxis" />
+                            </div>
+                            <div class="shapeInput">
+                                <label>b-Axis</label>
+                                <input type=" number" value="" name="b-axis" placeholder="text" id="bAxis" />
+                            </div>
+                        </div>
+
+                        <div class="actions">
+                            <button onclick="moveStep3()">Go to step3</button>
+                            <a onclick="reset()">or Cancel</a>
+                        </div>
+                    </div>
+
+                    <div id="step3" style="display: none;">
+                        <h3>
+                            Step3 : Your results
+                        </h3>
+                        <div>
+                            You have calculated the area of a <span id="step3ShapeText"></span>
+                            with a <span id="shapeTxtValue"></span>. Below is your result:
+                        </div>
+                        <div>
+                            <p>The Area is <span id="shapeValue"></span></p>
+                        </div>
+                        <div>
+                            <button onclick="reset()">Start over</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vertical">
+                <p>120*240 Ad</p>
+                <p>(Vertical Banner)</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
