@@ -31,7 +31,7 @@ moveStep3 = () => {
         case "circle":
             let diameter = document.getElementById("diameter").value;
             shapeTxtValue = "diameter of " + diameter;
-            shapeTxtResult = Math.PI * diameter;;
+            shapeTxtResult = Math.PI *  diameter/2 * diameter/2;
             break;
         case "square":
             let side = document.getElementById("side").value;
