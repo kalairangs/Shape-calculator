@@ -62,7 +62,7 @@
                         </div>
                         <div class="actions">
                             <button onclick="moveStep2()">Go to step2</button>
-                            <a>or Cancel</a>
+                            <a onclick="clearForm()">or Cancel</a>
                         </div>
                     </div>
 
@@ -112,7 +112,7 @@
 
                         <div class="actions">
                             <button onclick="moveStep3()">Go to step3</button>
-                            <a onclick="reset()">or Cancel</a>
+                            <a onclick="clearForm()">or Cancel</a>
                         </div>
                     </div>
 
@@ -128,10 +128,11 @@
                             <p>The Area is <span id="shapeValue"></span></p>
                         </div>
                         <div>
-                            <button onclick="reset()">Start over</button>
+                            <button onclick="clearForm()">Start over</button>
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="vertical">
                 <p>120*240 Ad</p>

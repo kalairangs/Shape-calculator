@@ -31,12 +31,12 @@ moveStep3 = () => {
         case "circle":
             let diameter = document.getElementById("diameter").value;
             shapeTxtValue = "diameter of " + diameter;
-            shapeTxtResult = Math.PI *  diameter/2 * diameter/2;
+            shapeTxtResult = Math.PI * diameter / 2 * diameter / 2;
             break;
         case "square":
             let side = document.getElementById("side").value;
             shapeTxtValue = "side of " + side;
-            shapeTxtResult =  side * side;
+            shapeTxtResult = side * side;
             break;
         case "ellipse":
             var aAxis = document.getElementById("aAxis").value;
@@ -53,7 +53,14 @@ moveStep3 = () => {
     document.getElementById("step3").style.display = "block";
 }
 
-reset = () =>{
+clearForm = () => {
+
+    let shapes = document.getElementsByName("shape");
+    for (let i = 0; i < shapes.length; i++) {
+        document.getElementById(`${shapes[i].id}-input`).style.display = "none";
+        shapes[i].checked = false;
+    }
     document.getElementById("step1").style.display = "block";
+    document.getElementById("step2").style.display = "none";
     document.getElementById("step3").style.display = "none";
 }
