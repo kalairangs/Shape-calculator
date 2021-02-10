@@ -16,6 +16,31 @@ moveStep2 = () => {
     document.getElementById(selectedId + "-input").style.display = "block";
 
 }
+
+var shapeFactory = function (...args) {
+    var shape = {};
+    shape.length = args[0];
+    shape.width = args[1];
+    shape.diameter = args[0];
+    shape.side = args[0];
+    shape.aAxis = args[0];
+    shape.bAxis = args[1];
+  
+    shape.printRecArea = function () {
+      return this.length * this.width;
+    };
+    shape.printCircleArea = function () {
+      return Math.PI * this.diameter;
+    };
+    shape.printsquareArea = function () {
+      return this.side * this.side;
+    };
+    shape.printEllipseArea = function () {
+      return Math.PI * this.aAxis * this.bAxis;
+    };
+    return shape;
+  };
+
 moveStep3 = () => {
 
     var shapeTxtValue;
@@ -26,24 +51,28 @@ moveStep3 = () => {
             let width = document.getElementById("width").value;
             shapeTxtValue = "length of " + length;
             shapeTxtValue += " and width of " + width;
-            shapeTxtResult = length * width;
+            let areaOfRec = shapeFactory(length, width);
+             shapeTxtResult = areaOfRec.printRecArea();
             break;
         case "circle":
             let diameter = document.getElementById("diameter").value;
             shapeTxtValue = "diameter of " + diameter;
-            shapeTxtResult = Math.PI * diameter / 2 * diameter / 2;
+            let areaOfCir = shapeFactory(diameter);
+             shapeTxtResult = areaOfCir.printCircleArea();
             break;
         case "square":
             let side = document.getElementById("side").value;
             shapeTxtValue = "side of " + side;
-            shapeTxtResult = side * side;
+            let areaOfSquare = shapeFactory(side);
+             shapeTxtResult = areaOfSquare.printsquareArea();
             break;
         case "ellipse":
             var aAxis = document.getElementById("aAxis").value;
             var bAxis = document.getElementById("bAxis").value;
             shapeTxtValue = "a-Axis of " + aAxis;
             shapeTxtValue += " b-Axis of " + bAxis;
-            shapeTxtResult = Math.PI * aAxis * bAxis;
+            let areaOfElli = shapeFactory(aAxis,bAxis);
+            shapeTxtResult = areaOfElli.printEllipseArea();
             break;
     }
     document.getElementById("shapeTxtValue").innerHTML = shapeTxtValue;
